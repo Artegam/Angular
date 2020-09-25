@@ -1,0 +1,16 @@
+<a routerLink="form">Céer un Manimal</a>
+<mat-list>
+    <mat-list-item *ngFor="let a of animals" appUppercase>
+        <mat-icon mat-list-icon>event note</mat-icon>
+        <app-animal [animal]="a" (delete)="onDelete($event)"></app-animal>
+    </mat-list-item>
+</mat-list>
+<!-- <ul>
+    <li *ngFor="let a of animals" appUppercase>
+        <app-animal [animal]="a" (delete)="onDelete($event)"></app-animal>
+    </li>
+</ul> -->
+
+<div>
+    <router-outlet></router-outlet>
+</div>

@@ -1,0 +1,35 @@
+<form [formGroup]="animalForm" *ngIf="animalForm" (submit)="onSubmit()">
+    <label>name</label>
+    <br>
+    <input id="name" type="text" name="name" formControlName="name" required minlength=4/>
+    <p *ngIf="animalForm.get('name').errors?.required">
+        Ce champ est obligatoire
+    </p>
+    <p *ngIf="animalForm.get('name').errors?.minlength(4)">
+        Ce champ doit avoir au moins 4 caractères
+    </p>
+    <br>
+    <label>genre</label>
+    <br>
+    <input id="genre" type="text" name="genre" formControlName="genre" />
+    <br>
+    <label>birthday</label>
+    <br>
+    <input id="birthday" type="date" name="birthday" formControlName="birthday" />
+    <br>
+    <label>img</label>
+    <br>
+    <input id="img" type="text" name="img" formControlName="img" />
+    <br>    
+    <label>veterinaire</label>
+    <br>
+    <input id="veterinaire" type="text" name="veterinaire" formControlName="veterinaire" />
+    <br>    
+    <label>commentaire</label>
+    <br>
+    <input id="commentaire" type="text" name="commentaire" formControlName="commentaire" />
+    <br>
+
+    <button type="submit" [disabled]="!animalForm.valid">Sauvegarder</button>
+    <br>
+</form>

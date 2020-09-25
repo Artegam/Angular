@@ -1,0 +1,9 @@
+<h2>{{ animal?.name }}</h2>
+<br>
+{{ animal?.birthday | date: "shortDate" }}
+<br>
+<img [src]="animal?.img" />
+<br>
+<button (click)="onDelete()">Delete</button>
+<a [routerLink]="['form', animal?.id]">Modifier</a>
+<a [routerLink]="animal?.id">Voir</a>
