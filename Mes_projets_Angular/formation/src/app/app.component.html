@@ -1,7 +1,14 @@
 <mat-toolbar color="primary"> 
-  <span> Mon application des animaux </span> 
+  <span>{{ "nav.title" | translate }} </span> 
 </mat-toolbar>
-
+<span class="spacer"></span>
+<button mat-icon-button [matMenuTriggerFor]="menuLang">
+  <mat-icon>Language</mat-icon>
+</button>
+<mat-menu #menuLang="matMenu">
+  <button mat-menu-item (click)="setLang('en')">Anglais</button>
+  <button mat-menu-item (click)="setLang('fr')">Français</button>
+</mat-menu>
 <a routerLink="/">
     <mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon>
 </a><br>

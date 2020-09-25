@@ -14,6 +14,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
 
 
+
 @NgModule({
   declarations: [AnimalComponent, AnimalsComponent, UppercaseDirective, TruncatePipe, DetailComponent, FormComponent],
   imports: [CommonModule, HttpClientModule, AnimalRoutingModule, FormsModule, ReactiveFormsModule, MatListModule, MatIconModule],
